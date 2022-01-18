@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmailSignInActivity">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:text="@string/instagram"
+        android:textColorHint="#564B4B"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toTopOf="@id/input_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/input_id"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:hint="@string/enter_name"
+        android:textColorHint="#383A3C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:hint="@string/enter_password"
+        android:inputType="textPassword"
+        android:textColorHint="#383A3C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_id" />
+
+    <TextView
+        android:id="@+id/btn_sign_up"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="#948F8F"
+        android:gravity="center"
+        android:text="@string/sign_up"
+        app:layout_constraintEnd_toEndOf="@id/btn_sign_in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_password" />
+
+    <TextView
+        android:id="@+id/btn_sign_in"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="#948F8F"
+        android:gravity="center"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btn_sign_up"
+        app:layout_constraintTop_toBottomOf="@id/input_password" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

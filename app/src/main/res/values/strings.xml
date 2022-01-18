@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">android-instagram-clone</string>
+    <string name="instagram">Instagram</string>
+    <string name="enter_name">아이디를 입력해주세요</string>
+    <string name="enter_password">패스워드 입력해주세요</string>
+    <string name="confirm_password">패스워드를 다 입력해주세요</string>
+    <string name="sign_up">가입하기</string>
+    <string name="login">로그인하기</string>
+</resources>
