@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InstagramMyPostListActivity">
+
+    <TextView
+        android:id="@+id/footer_menu_1"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="전체"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/footer_menu_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/footer_menu_2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/purple_500"
+        android:gravity="center"
+        android:text="본인"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/footer_menu_3"
+        app:layout_constraintStart_toEndOf="@id/footer_menu_1" />
+
+    <TextView
+        android:id="@+id/footer_menu_3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/purple_700"
+        android:gravity="center"
+        android:text="업로드"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/footer_menu_4"
+        app:layout_constraintStart_toEndOf="@id/footer_menu_2" />
+
+    <TextView
+        android:id="@+id/footer_menu_4"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/teal_200"
+        android:gravity="center"
+        android:text="정보"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/footer_menu_3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

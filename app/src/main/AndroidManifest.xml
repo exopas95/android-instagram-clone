@@ -3,6 +3,8 @@
     package="com.example.android_instagram_clone">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MasterApplication"
@@ -13,10 +15,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidinstagramclone">
         <activity
+            android:name=".InstagramUploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstagramMyPostListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstagramUserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstagramPostListActivity"
+            android:exported="false" />
+        <activity
             android:name=".EmailSignInActivity"
             android:exported="false" />
         <activity
-            android:name=".EmailSignupActivity"
+            android:name=".EmailSignUpActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

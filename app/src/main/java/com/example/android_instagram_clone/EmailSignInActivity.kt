@@ -33,7 +33,7 @@ class EmailSignInActivity : AppCompatActivity() {
     }
 
     private fun signUp() {
-        val intent = Intent(this, EmailSignupActivity::class.java)
+        val intent = Intent(this, EmailSignUpActivity::class.java)
         startActivity(intent)
     }
 
@@ -51,6 +51,9 @@ class EmailSignInActivity : AppCompatActivity() {
                     val token = user?.token
                     saveUserToken(token)
                     (application as MasterApplication).createRetrofit()
+                    this@EmailSignInActivity.startActivity(
+                        Intent(this@EmailSignInActivity, InstagramPostListActivity::class.java)
+                    )
                 }
             }
 

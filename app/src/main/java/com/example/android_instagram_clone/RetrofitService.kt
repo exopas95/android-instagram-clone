@@ -1,6 +1,8 @@
 package com.example.android_instagram_clone
 
 import android.app.Person
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -32,4 +34,14 @@ interface RetrofitService {
         @Field("username") username: String,
         @Field("password") password: String
     ): Call<User>
+
+    @GET("/instagram/post/list/all/")
+    fun getAllPosts(): Call<ArrayList<Post>>
+
+    @Multipart
+    @POST("/instagram/post/")
+    fun uploadPost(
+        @Part image: MultipartBody.Part,
+        @Part ("content")requestBody: RequestBody
+    ): Call<Post>
 }

@@ -1,20 +1,17 @@
 package com.example.android_instagram_clone
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.example.android_instagram_clone.databinding.ActivityEmailSignupBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class EmailSignupActivity : AppCompatActivity() {
+class EmailSignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEmailSignupBinding
 
     lateinit var userName: EditText
@@ -24,8 +21,13 @@ class EmailSignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEmailSignupBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
+        if((application as MasterApplication).checkIsLogin()){
+            finish()
+            startActivity(Intent(this, InstagramPostListActivity::class.java))
+        }
+
+        setContentView(binding.root)
         initView()
         setupListener()
     }
@@ -62,7 +64,7 @@ class EmailSignupActivity : AppCompatActivity() {
             .enqueue(object : Callback<User> {
                 override fun onResponse(call: Call<User>, response: Response<User>) {
                     if (response.isSuccessful) {
-                        Toast.makeText(this@EmailSignupActivity, "가입에 성공하였습니다.", Toast.LENGTH_LONG)
+                        Toast.makeText(this@EmailSignUpActivity, "가입에 성공하였습니다.", Toast.LENGTH_LONG)
                             .show()
                         val user = response.body()
                         val token = user?.token
@@ -70,11 +72,14 @@ class EmailSignupActivity : AppCompatActivity() {
                             saveUserToken(token)
                         }
                         (application as MasterApplication).createRetrofit()
+                        this@EmailSignUpActivity.startActivity(
+                            Intent(this@EmailSignUpActivity, InstagramPostListActivity::class.java)
+                        )
                     }
                 }
 
                 override fun onFailure(call: Call<User>, t: Throwable) {
-                    Toast.makeText(this@EmailSignupActivity, "가입에 실패하였습니다.", Toast.LENGTH_LONG)
+                    Toast.makeText(this@EmailSignUpActivity, "가입에 실패하였습니다.", Toast.LENGTH_LONG)
                         .show()
                 }
             })

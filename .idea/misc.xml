@@ -5,6 +5,12 @@
       <map>
         <entry key="app/src/main/res/layout/activity_email_login.xml" value="0.301025641025641" />
         <entry key="app/src/main/res/layout/activity_email_signup.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/activity_instagram_my_post_list.xml" value="0.30625" />
+        <entry key="app/src/main/res/layout/activity_instagram_post_list.xml" value="0.27589743589743587" />
+        <entry key="app/src/main/res/layout/activity_instagram_upload.xml" value="0.30625" />
+        <entry key="app/src/main/res/layout/activity_instagram_user_info.xml" value="0.30625" />
+        <entry key="app/src/main/res/layout/instagram_item_view.xml" value="0.2898148148148148" />
+        <entry key="app/src/main/res/layout/item_recycler_instagram_content_view.xml" value="0.1" />
       </map>
     </option>
   </component>
